@@ -58,7 +58,9 @@ public class SWConsumer extends Thread implements VideoConsumer {
 
                 if (r > 0) {
                     keyFrame = keyFrm[0] == 1;
-                    Log.i(TAG, String.format("encode spend:%d ms. keyFrm:%d", System.currentTimeMillis() - begin, keyFrm[0]));
+                    Log.i(TAG, String.format("encode spend:%d ms. keyFrm:%d. (height:%d, width:%d)", System.currentTimeMillis() - begin, keyFrm[0],
+                            mHeight, mWidth));
+//                    Log.i(TAG, String.format("encode spend:%d ms. keyFrm:%d", System.currentTimeMillis() - begin, keyFrm[0]));
 //                    newBuf = new byte[outLen[0]];
 //                    System.arraycopy(h264, 0, newBuf, 0, newBuf.length);
                 }
